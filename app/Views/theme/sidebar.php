@@ -94,20 +94,8 @@ body.dark-mode .main-sidebar .nav-link:hover {
       </a>
     </li>
    
-      <li class="nav-item">
-      <a href="<?= base_url('dress') ?>" class="nav-link <?= is_active(1, 'dress') ?>">
-        <i class="nav-icon fas fa-history"></i>
-        <p>Dress </p>
-      </a>
-    </li>
-    </li>
-      <li class="nav-item">
-      <a href="<?= base_url('person') ?>" class="nav-link <?= is_active(1, 'person') ?>">
-        <i class="nav-icon fas fa-history"></i>
-        <p>Person </p>
-      </a>
-    </li>
-
+    
+    
     <li class="nav-item">
     <a href="<?= base_url('student') ?>" class="nav-link">
         <i class="nav-icon fas fa-user-graduate"></i>
@@ -116,13 +104,22 @@ body.dark-mode .main-sidebar .nav-link:hover {
 </li>
 
 
+    <li class="nav-item">
+    <a href="<?= base_url('teacher') ?>" class="nav-link">
+        <i class="nav-icon fas fa-chalkboard-teacher"></i>
+        <p>Teachers</p>
+    </a>
+    </li>
 
-     <li class="nav-item">
+
+    <li class="nav-item">
       <a href="<?= base_url('users') ?>" class="nav-link <?= is_active(1, 'users') ?>">
         <i class="nav-icon fas fa-user-lock"></i>
         <p>User Accounts</p>
       </a>
     </li>
+
+
 
 
   </ul>

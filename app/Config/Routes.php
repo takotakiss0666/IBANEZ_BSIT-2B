@@ -32,5 +32,16 @@ $routes->get('student/edit/(:segment)', 'Student::edit/$1');
 $routes->post('student/update', 'Student::update');
 $routes->delete('student/delete/(:num)', 'Student::delete/$1');
 $routes->post('student/fetchRecords', 'Student::fetchRecords');
+
+/// Teacher routes
+$routes->get('/teacher', 'Teacher::index');
+$routes->post('teacher/save', 'Teacher::save');
+$routes->get('teacher/edit/(:segment)', 'Teacher::edit/$1');
+$routes->post('teacher/update', 'Teacher::update');
+$routes->delete('teacher/delete/(:num)', 'Teacher::delete/$1');
+$routes->post('teacher/fetchRecords', 'Teacher::fetchRecords');
+
+
+
 // Logs routes for admin
 $routes->get('/log', 'Logs::log');
