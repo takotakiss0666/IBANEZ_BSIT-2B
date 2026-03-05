@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1deb1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jul 21, 2025 at 12:33 PM
--- Server version: 10.11.9-MariaDB-0+deb12u1
--- PHP Version: 8.2.26
+-- Host: 127.0.0.1
+-- Generation Time: Mar 05, 2026 at 05:54 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -45,6 +45,27 @@ INSERT INTO `login_attempts` (`id`, `email`, `ip_address`, `attempt_time`, `user
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `student`
+--
+
+CREATE TABLE `student` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `bday` date NOT NULL,
+  `address` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`id`, `name`, `bday`, `address`) VALUES
+(1, 'asasa', '0121-02-12', 'aassasa'),
+(2, 'asasa', '0021-11-21', 'sasasasaa');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_logs`
 --
 
@@ -77,7 +98,10 @@ INSERT INTO `tbl_logs` (`LOGID`, `USERID`, `ACTION`, `DATELOG`, `TIMELOG`, `user
 (10, '1', 'Logout', '2025-07-21', '20:19:56', '::1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36', 'Glenn Azuelo', 'LOGOUT'),
 (11, '1', 'Login: Glenn Azuelo', '2025-07-21', '20:21:27', '::1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36', 'Glenn Azuelo', 'LOGIN'),
 (12, '1', 'New User has been added: xxx', '2025-07-21', '20:32:39', '::1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36', 'Glenn Azuelo', 'ADD'),
-(13, '1', 'Delete user', '2025-07-21', '20:32:44', '::1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36', 'Glenn Azuelo', 'DELETED');
+(13, '1', 'Delete user', '2025-07-21', '20:32:44', '::1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36', 'Glenn Azuelo', 'DELETED'),
+(14, '1', 'Login: Glenn Azuelo', '2026-03-05', '11:50:49', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36', 'Glenn Azuelo', 'LOGIN'),
+(15, '1', 'New Student has been added: asasa', '2026-03-05', '12:05:57', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36', 'Glenn Azuelo', 'ADD'),
+(16, '1', 'New Student has been added: asasa', '2026-03-05', '12:06:58', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36', 'Glenn Azuelo', 'ADD');
 
 -- --------------------------------------------------------
 
@@ -119,6 +143,12 @@ ALTER TABLE `login_attempts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `student`
+--
+ALTER TABLE `student`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_logs`
 --
 ALTER TABLE `tbl_logs`
@@ -143,10 +173,16 @@ ALTER TABLE `login_attempts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
+-- AUTO_INCREMENT for table `student`
+--
+ALTER TABLE `student`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `tbl_logs`
 --
 ALTER TABLE `tbl_logs`
-  MODIFY `LOGID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `LOGID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `users`
