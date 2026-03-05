@@ -22,17 +22,13 @@ $routes->delete('users/delete/(:num)', 'Users::delete/$1');
 $routes->post('users/fetchRecords', 'Users::fetchRecords');
 
 
-
-
-
-// student routes
+// Student routes
 $routes->get('/student', 'Student::index');
 $routes->post('student/save', 'Student::save');
 $routes->get('student/edit/(:segment)', 'Student::edit/$1');
 $routes->post('student/update', 'Student::update');
 $routes->delete('student/delete/(:num)', 'Student::delete/$1');
 $routes->post('student/fetchRecords', 'Student::fetchRecords');
-
 /// Teacher routes
 $routes->get('/teacher', 'Teacher::index');
 $routes->post('teacher/save', 'Teacher::save');
